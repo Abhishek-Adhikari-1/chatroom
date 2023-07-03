@@ -30,6 +30,7 @@ io.on("connection", (socket) => {
 	});
 	socket.on("disconnecting", (user) => {
 		socket.broadcast.emit("user-disconnected", users[socket.id]);
+		users[socket.id] = null;
 	});
 });
 
