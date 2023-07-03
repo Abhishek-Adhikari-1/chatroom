@@ -263,7 +263,7 @@ function runChatSection() {
 				let msg = {
 					user: user,
 					profile: profile,
-					message: `<img class="pos loading="lazy" sentImage" src="${this.result}" />`,
+					message: `<img class="pos sentImage" loading="lazy" src="${this.result}" />`,
 				};
 				// Append
 				appendMessage(msg, "outgoing");
