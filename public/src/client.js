@@ -319,13 +319,13 @@ function runChatSection() {
 		messageContainer.appendChild(messageElem);
 	};
 	// Users message recieving
-	if (user !== null) {
 	socket.on("message", (msg) => {
+	if (user !== null) {
 		appendMessage(msg, "incoming");
 		playMessageReceiveSound();
 		scrollToBottom();
-	});
 	}
+	});
 	// Getting newly connected users
 	socket.on("user-connected", (user) => {
 		append(`${user} joined the chat`);
