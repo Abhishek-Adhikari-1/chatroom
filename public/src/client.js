@@ -337,9 +337,10 @@ function runChatSection() {
 		socket.emit("disconnecting", user);
 	});
 	// Getting disconnected users
-	socket.on("user-disconnected", (user) => {
-		if (user !== null) {
-			append(`${user} left the chat`);
+	socket.on("user-disconnected", (userr) => {
+		if (userr !== null) {
+			append(`${userr} left the chat`);
+			user = userr;
 			playUserLeftSound();
 			scrollToBottom();
 		}
